@@ -12,7 +12,7 @@ con `fetch` sin recargar la página.
 
 ## URL pública
 
-**[https://trionix-tickets-kanusaru.onrender.com](https://trionix-tickets-agentes-production.up.railway.app/)**
+**[https://trionix-tickets-agentes-production.up.railway.app/]**
 
 ## Tecnologías
 
