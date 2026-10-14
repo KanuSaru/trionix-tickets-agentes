@@ -10,9 +10,9 @@ colecciones relacionadas: `tickets` y `agentes`. Cada ticket puede tener un agen
 `ObjectId`), que la API devuelve ya resuelto con `populate`. Un frontend estático en HTML/CSS/JS consume la API
 con `fetch` sin recargar la página.
 
-## 🌐 URL pública
+## URL pública
 
-**https://trionix-tickets-kanusaru.onrender.com**
+**[https://trionix-tickets-kanusaru.onrender.com](https://trionix-tickets-agentes-production.up.railway.app/)**
 
 ## Tecnologías
 
