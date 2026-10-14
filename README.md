@@ -130,7 +130,7 @@ Ejemplo de ticket con el agente resuelto:
 ## Despliegue
 
 - **Base de datos:** MongoDB Atlas (cluster M0 gratuito), base `trionix`.
-- **Servidor:** Render (Web Service desde este repositorio): build `npm install`, start `npm start`.
-- **Variables:** `MONGODB_URI` configurada en *Environment* del panel de Render; nunca en el código.
+- **Servidor:** Railway (servicio desplegado desde este repositorio): build `npm install`, start `npm start`.
+- **Variables:** `MONGODB_URI` configurada en *Environment* del panel de Railway; nunca en el código.
 
 Verificación rápida en producción: `GET /api/health` → `{ "ok": true, "baseDeDatos": "conectada" }`.
