@@ -12,7 +12,7 @@ con `fetch` sin recargar la página.
 
 ## 🌐 URL pública
 
-**https://REEMPLAZAR-CON-TU-URL.onrender.com**
+**https://trionix-tickets-kanusaru.onrender.com**
 
 ## Tecnologías
 
