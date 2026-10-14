@@ -1,0 +1,24 @@
+{
+  "name": "trionix-tickets-agentes",
+  "version": "1.0.0",
+  "description": "Sistema de tickets de soporte con agentes — Express + Joi + MongoDB/Mongoose",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js",
+    "seed": "node seed.js",
+    "probar": "node pruebas/probar-api.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "Erick Fabián Donado Fonseca",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "joi": "^17.13.3",
+    "mongoose": "^8.19.1"
+  }
+}

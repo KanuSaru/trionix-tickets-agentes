@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trionix Tickets</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="marca">
+      <span class="logo" aria-hidden="true">T</span>
+      <div>
+        <h1>Trionix Tickets</h1>
+        <p>Soporte técnico · Trionix Labs</p>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button class="tab activo" role="tab" data-vista="tickets" aria-selected="true">Tickets</button>
+      <button class="tab" role="tab" data-vista="agentes" aria-selected="false">Agentes</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ═══════════ VISTA TICKETS ═══════════ -->
+    <section id="vista-tickets" class="vista">
+      <aside class="panel">
+        <h2>Nuevo ticket</h2>
+        <form id="form-ticket" novalidate>
+          <label>Cliente
+            <input name="cliente" required minlength="2" maxlength="100" placeholder="Ej: Clínica del Prado" />
+          </label>
+          <label>Asunto
+            <input name="asunto" required minlength="5" maxlength="200" placeholder="Describe el problema" />
+          </label>
+          <label>Prioridad
+            <select name="prioridad" required>
+              <option value="">Selecciona…</option>
+              <option value="baja">Baja</option>
+              <option value="media">Media</option>
+              <option value="alta">Alta</option>
+            </select>
+          </label>
+          <p class="form-msg" role="alert"></p>
+          <button type="submit" class="btn primario">Crear ticket</button>
+        </form>
+      </aside>
+
+      <div class="contenido">
+        <div class="barra-filtros">
+          <input id="filtro-q" type="search" placeholder="Buscar por asunto o cliente…" aria-label="Buscar" />
+          <select id="filtro-estado" aria-label="Filtrar por estado">
+            <option value="">Todos los estados</option>
+            <option value="abierto">Abiertos</option>
+            <option value="resuelto">Resueltos</option>
+          </select>
+          <select id="filtro-prioridad" aria-label="Filtrar por prioridad">
+            <option value="">Todas las prioridades</option>
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+          </select>
+        </div>
+        <p id="resumen-tickets" class="resumen"></p>
+        <div id="lista-tickets" class="lista" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ VISTA AGENTES ═══════════ -->
+    <section id="vista-agentes" class="vista" hidden>
+      <aside class="panel">
+        <h2>Nuevo agente</h2>
+        <form id="form-agente" novalidate>
+          <label>Nombre
+            <input name="nombre" required minlength="3" maxlength="100" placeholder="Ej: Laura Gómez" />
+          </label>
+          <label>Correo
+            <input name="email" type="email" required placeholder="laura@trionixlabs.com" />
+          </label>
+          <label>Especialidad
+            <select name="especialidad" required>
+              <option value="">Selecciona…</option>
+              <option value="redes">Redes</option>
+              <option value="software">Software</option>
+              <option value="hardware">Hardware</option>
+              <option value="general">General</option>
+            </select>
+          </label>
+          <label class="check">
+            <input name="activo" type="checkbox" checked /> Activo
+          </label>
+          <p class="form-msg" role="alert"></p>
+          <button type="submit" class="btn primario">Crear agente</button>
+        </form>
+      </aside>
+
+      <div class="contenido">
+        <div class="barra-filtros">
+          <select id="filtro-especialidad" aria-label="Filtrar por especialidad">
+            <option value="">Todas las especialidades</option>
+            <option value="redes">Redes</option>
+            <option value="software">Software</option>
+            <option value="hardware">Hardware</option>
+            <option value="general">General</option>
+          </select>
+          <select id="filtro-activo" aria-label="Filtrar por estado del agente">
+            <option value="">Activos e inactivos</option>
+            <option value="true">Solo activos</option>
+            <option value="false">Solo inactivos</option>
+          </select>
+        </div>
+        <p id="resumen-agentes" class="resumen"></p>
+        <div id="lista-agentes" class="lista" aria-live="polite"></div>
+        <div id="tickets-de-agente" class="panel detalle" hidden></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="avisos" class="avisos" aria-live="assertive"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
